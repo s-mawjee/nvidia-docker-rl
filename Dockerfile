@@ -4,3 +4,4 @@ RUN apt-get update && apt-get install -y software-properties-common apt-utils &&
 RUN apt-get update && apt-get install -y build-essential python3.6 python3.6-dev python3-pip python3.6-venv git cmake
 RUN pip3 install --upgrade setuptools pip
 RUN pip3 install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matplotlib pandas
+RUN pip3 install mlagents==0.8.2 Pillow 
