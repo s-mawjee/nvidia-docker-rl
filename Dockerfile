@@ -12,3 +12,7 @@ RUN python3 get-pip.py --force-reinstall
 
 RUN pip install --upgrade setuptools pip
 RUN pip install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matplotlib pandas mlagents==0.8.2 Pillow 
+
+WORKDIR /usr/src/
+RUN wget https://storage.googleapis.com/obstacle-tower-build/v2.2/obstacletower_v2.2_linux.zip
+RUN unzip obstacletower_v2.2_linux.zip
