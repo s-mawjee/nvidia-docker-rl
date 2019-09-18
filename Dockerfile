@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y build-essential python3.6 python3.6-dev
 RUN rm /usr/bin/python3
 RUN ln -s python3.6 /usr/bin/python3
 
-RUN apt-get install wget curl zip unzip
+RUN apt-get install wget curl zip unzip libfontconfig1 libxrender1
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py --force-reinstall
 
