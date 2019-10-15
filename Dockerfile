@@ -15,5 +15,5 @@ RUN pip install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matpl
 RUN pip install mlagents==0.6.0
 
 WORKDIR /usr/src/
-RUN wget https://storage.googleapis.com/obstacle-tower-build/v2.2/obstacletower_v2.2_linux.zip
-RUN unzip obstacletower_v2.2_linux.zip
+RUN wget https://storage.googleapis.com/obstacle-tower-build/v3.1/obstacletower_v3.1_linux.zip
+RUN unzip obstacletower_v3.1_linux.zip
