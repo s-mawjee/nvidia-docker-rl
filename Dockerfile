@@ -11,7 +11,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py --force-reinstall
 
 RUN pip install --upgrade setuptools pip
-RUN pip install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matplotlib pandas mlagents==0.8.2 Pillow comet_ml opencv-python
+RUN pip install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matplotlib pandas mlagents Pillow comet_ml opencv-python
 RUN pip install mlagents==0.6.0
 
 WORKDIR /usr/src/
