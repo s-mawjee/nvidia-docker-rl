@@ -6,13 +6,12 @@ RUN apt-get update && apt-get install -y build-essential python3.6 python3.6-dev
 RUN rm /usr/bin/python3
 RUN ln -s python3.6 /usr/bin/python3
 
-RUN apt-get install wget curl zip unzip libfontconfig1 libxrender1
+RUN apt-get install -y wget curl zip unzip libfontconfig1 libxrender1
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py --force-reinstall
 
 RUN pip install --upgrade setuptools pip
 RUN pip install tensorflow tensorflow-gpu torch torchvision gym gym[atari] matplotlib pandas mlagents Pillow comet_ml opencv-python
-RUN pip install mlagents==0.6.0
 
 WORKDIR /usr/src/
 RUN wget https://storage.googleapis.com/obstacle-tower-build/v3.1/obstacletower_v3.1_linux.zip
